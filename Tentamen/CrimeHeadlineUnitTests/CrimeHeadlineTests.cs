@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
+using CrimeHeadlineLib;
 
 namespace CrimeHeadlineUnitTests
 {
@@ -11,26 +12,28 @@ namespace CrimeHeadlineUnitTests
         public void Test_That_Screen_Scraper_Polisen_Returns_A_Value()
         {
             //Arrange
-            string expected = "fyll i rubrik här på senaste nyheten";
-            ScreenScraperPolisen scrPolisen = new ScreenScraperPolisen();
+            CrimeHeadlineSystem mediator = new CrimeHeadlineSystem();
+            ScreenScraperPolisen scrPolisen = new ScreenScraperPolisen(mediator);
             //Act
             Task<string> scrPolisenTask = scrPolisen.ScreenScrapeAsync();
             string actual = scrPolisenTask.Result;
             //Assert
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
+            Assert.IsNotNull(actual);
         }
 
         [TestMethod]
         public void Test_That_Screen_Scraper_Utryckning_Returns_A_Value()
         {
             //Arrange
-            string expected = "fyll i rubrik här på senaste nyheten";
-            ScreenScraperUtryckning scrUtryckning = new ScreenScraperUtryckning();
+            CrimeHeadlineSystem mediator = new CrimeHeadlineSystem();
+            ScreenScraperUtryckning scrUtryckning = new ScreenScraperUtryckning(mediator);
             //Act
-            Task<string> scrUtryckning = scrUtryckning.ScreenScrapeAsync();
-            string actual = scrUtryckning.Result;
+            Task<string> scrUtryckningTask = scrUtryckning.ScreenScrapeAsync();
+            string actual = scrUtryckningTask.Result;
             //Assert
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
+            Assert.IsNotNull(actual);
         }
     }
 }
