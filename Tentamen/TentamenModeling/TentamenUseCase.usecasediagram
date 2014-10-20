@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f2cd00d1-6df9-492a-a8b0-38756971f866" name="TentamenUseCase" linkedPackageId="aa213dec-26ba-4c17-be09-996ba6cd88ce" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="79dfce58-f089-47f8-89ab-4821a7361a7b">
+      <profileInstance Id="49523d7b-b502-4fa7-8988-68f24e25425f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7d49150a-a87f-40f8-bd3e-05c2756c1d07">
+      <profileInstance Id="290aa4e1-698d-4efc-8d48-e50011837819" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="c4e0ab5e-a819-48f9-8542-e1219a20083a" name="CrimeHeadlineSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="41e26921-15fc-4657-be88-2abb79647d9e" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a8a30801-2a81-4b20-b562-f0073f674d71" name="Criminal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="619d1ba1-61b4-44a3-821d-5e8ae741d585" />
+        <targetEnds>
+          <association Id="268bde7e-4498-4b5b-b62c-5974c6ae800a" isDerived="false" sourceEndRoleName="Criminal" targetEndRoleName="Read top crimes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82a74813-d6ca-463d-824b-0b2516e18515" LastKnownName="Read top crimes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d77a77d0-9a80-48c8-afe9-ba0d818a5a2b" name="Criminal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c23f40d-2069-49b6-aa9d-0db38e6f8845" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c480b88-e2e9-4714-9e87-6fe31dec2e0b" name="Read top crimes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="12b14f09-5b70-4e8b-8069-f26c9eb094b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3c0ccbcd-97ff-4d62-8def-0521d7d32589" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="82a74813-d6ca-463d-824b-0b2516e18515" name="Read top crimes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e61673b-2872-441b-88e2-67747f5b41dc" />
+        <subjects>
+          <subsystemMoniker Id="c4e0ab5e-a819-48f9-8542-e1219a20083a" LastKnownName="CrimeHeadlineSystem" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="aa213dec-26ba-4c17-be09-996ba6cd88ce" name="TentamenModeling">
+    <elementDefinition Id="5dfb1351-c6c0-453f-8e62-a5587fc9a03a" />
+  </package>
+</useCaseModelRoot>
