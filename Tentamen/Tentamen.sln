@@ -7,6 +7,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TentamenModeling", "Tentame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeHeadlineUnitTests", "CrimeHeadlineUnitTests\CrimeHeadlineUnitTests.csproj", "{D92BFFD7-7265-4B3C-80C5-880C15E8C21D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeHeadlineLib", "CrimeHeadlineLib\CrimeHeadlineLib.csproj", "{5EC68D4F-3F07-48B6-835C-96B096DF2960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D92BFFD7-7265-4B3C-80C5-880C15E8C21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92BFFD7-7265-4B3C-80C5-880C15E8C21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92BFFD7-7265-4B3C-80C5-880C15E8C21D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC68D4F-3F07-48B6-835C-96B096DF2960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC68D4F-3F07-48B6-835C-96B096DF2960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC68D4F-3F07-48B6-835C-96B096DF2960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC68D4F-3F07-48B6-835C-96B096DF2960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
