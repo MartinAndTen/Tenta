@@ -15,8 +15,8 @@ namespace CrimeHeadlineLib
 
         public override string RegexPattern
         {
-            //Lyckades inte hinna klura ut hur mitt regex pattern för Polisen.se ska se ut
-            get { return "Regex pattern ska in här!"; }
+            //Lyckades inte klura ut hur mitt regex pattern för Polisen.se ska se ut
+            get { return "<span [^>]*class=(\"|')news-date(\"|')>(.*?)</span>"; }
         }
 
         string IScreenScraper.Result
