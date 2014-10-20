@@ -40,7 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrimeHeadlineSystem.cs" />
+    <Compile Include="IScreenScraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenScraperBase.cs" />
+    <Compile Include="ScreenScraperFactory.cs" />
+    <Compile Include="ScreenScraperPolisen.cs" />
+    <Compile Include="ScreenScraperUtryckning.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
