@@ -8,8 +8,8 @@ namespace CrimeHeadlineLib
 {
     public interface IScreenScraper
     {
-        string xPath;
-        string result;
-        public void ReadTopCrime();
+        string Result { get; set; }
+        Task<string> ReadTopCrime();
+        string GetCrimeTitle(string Title);
     }
 }

@@ -13,5 +13,15 @@ namespace CrimeHeadlineLib
         {
             this._scraper = screenScraperPolisen;
         }
+
+        internal void FoundCrime(string p1, string p2)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void RegisterScr(ScreenScraperBase screenScraperBase)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

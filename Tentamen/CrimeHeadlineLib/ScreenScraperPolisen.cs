@@ -6,14 +6,29 @@ using System.Threading.Tasks;
 
 namespace CrimeHeadlineLib
 {
-    class ScreenScraperPolisen
+    class ScreenScraperPolisen : ScreenScraperBase, IScreenScraper
     {
-        private CrimeHeadlineSystem _mediator;
-
-        public ScreenScraperPolisen(CrimeHeadlineSystem mediator)
+        public override string Url
         {
-            this._mediator = mediator;
-            this._mediator.RegisterScrPolisen(this);
+            get { return "http://www.polisen.se/"; }
+        }
+
+        public override string RegexPattern
+        {
+            //Lyckades inte hinna klura ut hur mitt regex pattern för Polisen.se ska se ut
+            get { return "Regex pattern ska in här!"; }
+        }
+
+        string IScreenScraper.Result
+        {
+            get
+            {
+                return Result;
+            }
+            set
+            {
+                Result = value;
+            }
         }
     }
 }

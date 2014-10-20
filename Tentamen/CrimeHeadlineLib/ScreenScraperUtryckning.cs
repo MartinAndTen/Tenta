@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace CrimeHeadlineLib
 {
-    class ScreenScraperUtryckning
+    class ScreenScraperUtryckning : ScreenScraperBase, IScreenScraper
     {
+        public override string Url
+        {
+            get { return "http://www.utryckning.se/"; }
+        }
+
+        public override string RegexPattern
+        {
+            get { return "<h1[^>]*?>(?<TagText>.*?)</h1>"; }
+        }
+
+        string IScreenScraper.Result
+        {
+            get
+            {
+                return Result;
+            }
+            set
+            {
+                Result = value;
+            }
+        }
     }
 }
