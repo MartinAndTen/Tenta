@@ -13,13 +13,12 @@ namespace CrimeHeadlineUnitTests
         {
             //Arrange
             CrimeHeadlineSystem mediator = new CrimeHeadlineSystem();
-            ScreenScraperPolisen scrPolisen = new ScreenScraperPolisen(mediator);
+            IScreenScraper scraperPolisen = ScreenScraperFactory.CreateScraper(mediator, "Polisen");
             //Act
-            Task<string> scrPolisenTask = scrPolisen.ScreenScrapeAsync();
-            string actual = scrPolisenTask.Result;
+            Task<string> scrPolisenTask = scraperPolisen.ReadTopCrime();
+            string result = scrPolisenTask.Result;
             //Assert
-            //Assert.AreEqual(expected, actual);
-            Assert.IsNotNull(actual);
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
@@ -27,13 +26,12 @@ namespace CrimeHeadlineUnitTests
         {
             //Arrange
             CrimeHeadlineSystem mediator = new CrimeHeadlineSystem();
-            ScreenScraperUtryckning scrUtryckning = new ScreenScraperUtryckning(mediator);
+            IScreenScraper scraperUtryckning = ScreenScraperFactory.CreateScraper(mediator, "Utryckning");
             //Act
-            Task<string> scrUtryckningTask = scrUtryckning.ScreenScrapeAsync();
-            string actual = scrUtryckningTask.Result;
+            Task<string> scrUtryckningTask = scraperUtryckning.ReadTopCrime();
+            string result = scrUtryckningTask.Result;
             //Assert
-            //Assert.AreEqual(expected, actual);
-            Assert.IsNotNull(actual);
+            Assert.IsNotNull(result);
         }
     }
 }
